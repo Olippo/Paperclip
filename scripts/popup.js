@@ -5,6 +5,9 @@ window.onload = function () {
 
 function setLocalStorage(text) {
     localStorage["text"] = text;
+    chrome.storage.local.set({text: text}, function() {
+        console.log('Value is set to ' + text);
+      });
 }
 
 function getLocalStorage() {
