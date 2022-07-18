@@ -25,7 +25,6 @@ body {
 }
 
 #textarea {
-  /*padding-top: 7px;*/
   font-family: 'Inter', sans-serif;
   width: 100%;
   height: 100%;
@@ -51,9 +50,6 @@ body {
 
 .add-button {
   width: 280px;
-}
-.text {
-  padding-top: 7px;
 }
 
  
