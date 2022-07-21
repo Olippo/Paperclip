@@ -1,18 +1,25 @@
-window.onload = function () { 
-    setText(getLocalStorage());
-    console.log(localStorage);
+window.onload = function () {
+    //console.log("Loaded text: " +)
+    chrome.storage.sync.get("textBackup", function(items) {
+        if (!chrome.runtime.error) {
+          console.log(items);
+          setText(items.textBackup);
+        }
+    });
+
+    let text = " ";
+
+    document.getElementById("textarea").oninput = function() {
+        text = document.getElementById("textarea").value;
+        setStorage(text);
+    }
 }
 
-function setLocalStorage(text) {
-    localStorage["text"] = text;
-    chrome.storage.local.set({text: text}, function() {
-        console.log('Value is set to ' + text);
-      });
-}
-
-function getLocalStorage() {
-    let text = localStorage.getItem("text");
-    return text;
+function setStorage(text) {
+    chrome.storage.sync.set({'textBackup': text}, function() {
+        console.log("Updated to " + text);
+    });
+    console.log()
 }
 
 function setText(text) {

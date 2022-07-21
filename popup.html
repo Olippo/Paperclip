@@ -20,7 +20,7 @@
         -->
       </div>
       <div class="text">
-        <textarea id="textarea" oninput="setLocalStorage(getText());" cols="50" rows="10"></textarea>
+        <textarea id="textarea" oninput="setText(chrome.storage.local.get(['textBackup']))" cols="50" rows="10"></textarea>
       </div>
     </div>
   </body>

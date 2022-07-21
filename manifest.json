@@ -5,18 +5,9 @@
   "description": "Write quick text",
   "version": "0.1.0",
 
-  "content-scripts": [{
-    "matches": ["<all_urls>"],
-    "js": ["/scripts/content.js"],
-    "run_at": "document_end"
-  }],
-
   "browser_action": {
     "default_popup": "popup.html"
   },
   
-  "permissions": [
-    "activeTab",
-    "storage"
-  ]
+  "permissions": ["activeTab", "storage"]
 }
