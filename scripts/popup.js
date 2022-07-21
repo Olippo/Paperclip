@@ -1,5 +1,4 @@
 window.onload = function () {
-    //console.log("Loaded text: " +)
     chrome.storage.sync.get("textBackup", function(items) {
         if (!chrome.runtime.error) {
           console.log(items);

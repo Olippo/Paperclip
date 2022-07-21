@@ -24,14 +24,19 @@ body {
   text-align: center;
 }
 
+#text {
+  overflow-y: scroll; overflow-x: hidden;
+}
+
 #textarea {
   font-family: 'Inter', sans-serif;
-  width: 100%;
+  width: 99%;
   height: 100%;
   background-color: #2a2e34;
   color: white;
   border-radius: 7px;
   resize: none;
+  overflow-y:10px;
 }
 
 .button {
@@ -50,6 +55,20 @@ body {
 
 .add-button {
   width: 280px;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
  
