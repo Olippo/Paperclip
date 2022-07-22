@@ -1,5 +1,5 @@
 window.onload = function () {
-    chrome.storage.sync.get("textBackup", function(items) {
+    chrome.storage.local.get("textBackup", function(items) {
         if (!chrome.runtime.error) {
           console.log(items);
           setText(items.textBackup);
@@ -15,7 +15,7 @@ window.onload = function () {
 }
 
 function setStorage(text) {
-    chrome.storage.sync.set({'textBackup': text}, function() {
+    chrome.storage.local.set({'textBackup': text}, function() {
         console.log("Updated to " + text);
     });
     console.log()
