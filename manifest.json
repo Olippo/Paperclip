@@ -3,7 +3,7 @@
   
   "name": "Paperclip",
   "description": "Simple notes app for the browser",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "browser_action": {
     "default_popup": "popup.html",
